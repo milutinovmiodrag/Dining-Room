@@ -11,6 +11,7 @@ import { AboutComponent } from './core/about/about.component';
 import { RestaurantMainComponent } from './restaurant/restaurant-main/restaurant-main.component';
 import { ItemComponent } from './restaurant/item/item.component';
 import { FormsModule } from '@angular/forms';
+import { RatingPriceComponent } from './restaurant/rating-price/rating-price.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     AboutComponent,
     RestaurantMainComponent,
-    ItemComponent
+    ItemComponent,
+    RatingPriceComponent
   ],
   imports: [
     BrowserModule,
