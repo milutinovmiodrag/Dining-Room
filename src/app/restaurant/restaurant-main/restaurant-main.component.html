@@ -1,15 +1,18 @@
-<div class="row">
-  <div class="col-6">
+<div class="row container">
+  <div class="col-lg-6 col-md-12">
     <ngb-pagination [collectionSize]="restaurantCount" (pageSize)="params.pageSize" (pageChange)='refresh($event)'
       [boundaryLinks]="true"></ngb-pagination>
   </div>
-  <div class="col-6">
-    Price range <input type="number" [(ngModel)]="params.filter.priceFrom" (ngModelChange)="refresh()" min="1" max="5">
-    <input type="number" [(ngModel)]="params.filter.priceTo" (ngModelChange)='refresh()' min="1" max="5">
+  <div class="col-lg-6 col-md-12">
+    <div class="row">
+      <label class="form-label col-3">Price From</label>
+      <input type="number" class="form-control col-3" [(ngModel)]="params.filter.priceFrom" (ngModelChange)="refresh()" min="1" max="5">
+      <input type="number" class="form-control col-3" [(ngModel)]="params.filter.priceTo" (ngModelChange)='refresh()' min="1" max="5">
+    </div>
   </div>
 </div>
 <div class="row">
-  <div class="col-4" *ngFor="let item of restaurantList">
+  <div class="col-lg-4 col-md-6 col-sm-12 item" *ngFor="let item of restaurantList">
     <dr-item [restaurant]='item'></dr-item>
   </div>
 </div>

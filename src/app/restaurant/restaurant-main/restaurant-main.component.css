@@ -1,0 +1,23 @@
+.container{
+  padding: 1em 0;
+}
+
+input{
+  margin: 0 .5em;
+}
+
+label{
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.item{
+  margin: 1em 0;
+  height: 250px;
+}
+
+@media only screen and (max-width: 1150px){
+  .item{
+    height: 280px;
+  }
+}
