@@ -10,11 +10,24 @@ import { Restaurant } from "../model/restaurant.model";
 export class RestaurantMainComponent implements OnInit {
   restaurantList:Restaurant[];
   restaurantCount:number;
+  params = {
+    page: '1',
+    pageSize: '12'
+  }
 
   constructor(private service: RestaurantService) {}
 
   ngOnInit() {
-    this.service.getRestaurants().subscribe(
+    this.refresh(null);
+  }
+
+  refresh(newPage){
+    if(newPage){
+      this.params.page = newPage;
+    }else{
+      this.params.page = '1';
+    }
+    this.service.getRestaurants(this.params).subscribe(
       data => {
         this.restaurantList = data.restaurants;
         this.restaurantCount = data.count;
