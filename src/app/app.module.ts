@@ -12,6 +12,7 @@ import { RestaurantMainComponent } from './restaurant/restaurant-main/restaurant
 import { ItemComponent } from './restaurant/item/item.component';
 import { FormsModule } from '@angular/forms';
 import { RatingPriceComponent } from './restaurant/rating-price/rating-price.component';
+import { ModalComponent } from './restaurant/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RatingPriceComponent } from './restaurant/rating-price/rating-price.com
     AboutComponent,
     RestaurantMainComponent,
     ItemComponent,
-    RatingPriceComponent
+    RatingPriceComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,7 @@ import { RatingPriceComponent } from './restaurant/rating-price/rating-price.com
     NgbModule,
     FormsModule
   ],
-  providers: [],
+  entryComponents: [ModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

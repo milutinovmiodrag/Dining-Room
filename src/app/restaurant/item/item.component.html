@@ -1,4 +1,4 @@
-<h5 class="text-primary">{{restaurant.name}}</h5>
+<h5 class="text-primary" (click)='openModal(restaurant)'>{{restaurant.name}}</h5>
 <p>{{restaurant.description}}</p>
 <p>Rating: <dr-rating-price [iconFull]="'assets/images/coin-full.png'" [iconEmpty]="'assets/images/coin-empty.png'"
     [value]='restaurant.price'></dr-rating-price>
