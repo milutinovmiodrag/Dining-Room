@@ -14,12 +14,13 @@ export class RestaurantService {
   getRestaurants(params?): Observable<RestaurantSearchResult> {
     let queryParams = {};
 
-    if(params){
+    if (params) {
       queryParams = {
         params: new HttpParams()
-            .set('page', params.page || '1')
-            .set('pageSize', params.pageSize || '12')
-      }
+          .set("page", params.page || "1")
+          .set("pageSize", params.pageSize || "12")
+          .set("filter", JSON.stringify(params.filter))
+      };
     }
     return this.http.get(baseUrl, queryParams).pipe(
       map(data => {

@@ -1,9 +1,11 @@
 <div class="row">
   <div class="col-6">
-      <ngb-pagination [collectionSize]="restaurantCount" (pageSize)="params.pageSize" (pageChange)='refresh($event)' [boundaryLinks]="true"></ngb-pagination>
+    <ngb-pagination [collectionSize]="restaurantCount" (pageSize)="params.pageSize" (pageChange)='refresh($event)'
+      [boundaryLinks]="true"></ngb-pagination>
   </div>
   <div class="col-6">
-    TODO: PRICE FROM-TO
+    Price range <input type="number" [(ngModel)]="params.filter.priceFrom" (ngModelChange)="refresh()" min="1" max="5">
+    <input type="number" [(ngModel)]="params.filter.priceTo" (ngModelChange)='refresh()' min="1" max="5">
   </div>
 </div>
 <div class="row">
