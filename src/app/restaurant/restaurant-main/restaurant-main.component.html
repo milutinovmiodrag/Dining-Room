@@ -1,3 +1,13 @@
-<p>
-  restaurant-main works!
-</p>
+<div class="row">
+  <div class="col-6">
+    TODO: PAGINATION
+  </div>
+  <div class="col-6">
+    TODO: PRICE FROM-TO
+  </div>
+</div>
+<div class="row">
+  <div class="col-4" *ngFor="let item of restaurantList">
+    <dr-item [restaurant]='item'></dr-item>
+  </div>
+</div>
